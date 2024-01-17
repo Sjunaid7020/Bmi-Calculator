@@ -1,0 +1,137 @@
+
+.{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+.App {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-image: url("./images/Bmi.jpg");
+  background-size: cover;
+}
+
+.container{
+  width: 300px;
+  height: 400px;
+  display: flex;
+  border-radius: 30px;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background: linear-gradient(to top right, #58dd6a,#80924a);
+  box-shadow: 10px 10px lightblue;
+}
+
+.field{
+  position: relative;
+  margin: 6px;
+}
+.field input{
+  color: #010101;
+  background: none;
+  margin: 10px;
+  padding: 0.625rem;
+  border: 2px solid #030104;
+}
+.field label{
+  position: absolute;
+  padding-bottom: 5px;
+  translate: 0.625rem 0.625rem;
+  color: #030104;
+  background-color: transparent ;
+  padding-inline: 40px ;
+  border: transparent;
+  margin: 5px;
+  pointer-events: none;
+  transition: translate 250ms, background-color 250ms, border-color 250ms ;
+}
+
+  input::-webkit-outer-spin-button,
+  input::-webkit-inner-spin-button {
+     -webkit-appearance: none;
+  }
+
+.field:focus-within label,
+.field:not(:has(:placeholder-shown))
+label {
+  translate : .625rem -1.3rem;
+  border-color: #030104;
+}
+.field ::placeholder{
+  color: transparent;
+}
+
+
+.btn-group{
+  display: flex;
+}
+.btn{
+  appearance: button;
+  background-color: lightblue;
+  border: solid transparent;
+  border-radius: 16px;
+  border-width: 0 0 4px;
+  box-sizing: border-box;
+  color: #FFFFFF;
+  cursor: pointer;
+  display: inline-block;
+  font-family: din-round,sans-serif;
+  font-size: 15px;
+  font-weight: 700;
+  letter-spacing: .8px;
+  line-height: 20px;
+  margin: 3px;
+  padding: 5px;
+  outline: none;
+  overflow: visible;
+  padding: 13px 16px;
+  text-align: center;
+  text-transform: uppercase;
+  touch-action: manipulation;
+  transform: translateZ(0);
+  transition: filter .2s;
+  user-select: none;
+  -webkit-user-select: none;
+  vertical-align: middle;
+  white-space: nowrap;
+  width: 100%;
+}
+
+.btn:after {
+  background-clip: padding-box;
+  background-color: #1CB0F6;
+  border: solid transparent;
+  border-radius: 16px;
+  border-width: 0 0 4px;
+  bottom: -4px;
+  content: "";
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  z-index: -1;
+}
+
+.btn:main,
+.btn:focus {
+  user-select: auto;
+}
+
+.btn:hover:not(:disabled) {
+  filter: brightness(1.1);
+  -webkit-filter: brightness(1.1);
+}
+
+.btn:disabled {
+  cursor: auto;
+}
+
+.btn:active {
+  border-width: 4px 0 0;
+  background: none;
+}
